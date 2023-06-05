@@ -1,17 +1,27 @@
 import React from "react";
 import "./Header.css";
 import SearchIcon from "@mui/icons-material/Search";
-import inImg from "./images/linkedin.png";
-import avatarPic from "./images/pp-bg.jpg";
+import inImg from "../../images/linkedin.png";
 import HeaderOption from "./HeaderOption";
 import HomeIcon from "@mui/icons-material/Home";
 import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import ChatIcon from "@mui/icons-material/Chat";
-import PersonIcon from "@mui/icons-material/Person";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, selectUser } from "../../features/userSlice.js";
+import { auth } from "../../firebase";
 
 export default function Header() {
+  const dispatch = useDispatch();
+
+  const user = useSelector(selectUser);
+
+  const logOutOfApp = () => {
+    dispatch(logout());
+    auth.signOut();
+  };
+
   return (
     <div className="header">
       <div className="header__left">
@@ -19,7 +29,7 @@ export default function Header() {
 
         <div className="header__search">
           <SearchIcon />
-          <input type="text" />
+          <input type="text" placeholder="Search" />
         </div>
       </div>
 
@@ -29,7 +39,7 @@ export default function Header() {
         <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
         <HeaderOption Icon={ChatIcon} title="Messaging" />
         <HeaderOption Icon={NotificationsIcon} title="Notifications" />
-        <HeaderOption avatar={avatarPic} title="PratP" />
+        <HeaderOption onClick={logOutOfApp} avatar={true} title="Me" />
       </div>
     </div>
   );
