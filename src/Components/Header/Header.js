@@ -39,7 +39,7 @@ export default function Header() {
         <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
         <HeaderOption Icon={ChatIcon} title="Messaging" />
         <HeaderOption Icon={NotificationsIcon} title="Notifications" />
-        <HeaderOption onClick={logOutOfApp} avatar={true} title="Me" />
+        <HeaderOption onClick={logOutOfApp} avatar={true} title="Log Out" />
       </div>
     </div>
   );
