@@ -103,8 +103,30 @@
   margin-left: 5px;
 }
 
+.sidebar__smallscreen {
+  display: none;
+}
+
+.sidebarIcon {
+  position: absolute;
+  top: -40px;
+  left: 0px;
+}
+
 @media screen and (max-width: 850px) {
   .sidebar {
     display: none;
+  }
+
+  .sidebar__smallscreen {
+    display: inline;
+    height: 0;
+    width: 0;
+  }
+}
+
+@media screen and (max-width: 1200) {
+  .sidebar {
+    width: 100%;
   }
 }

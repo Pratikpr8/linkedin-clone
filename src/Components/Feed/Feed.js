@@ -58,7 +58,7 @@ function Feed() {
               type="text"
             />
             <button onClick={sendPost} type="submit">
-              Send
+              Post
             </button>
           </form>
         </div>

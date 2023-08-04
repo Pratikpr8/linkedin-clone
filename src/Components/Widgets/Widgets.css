@@ -52,9 +52,30 @@
   font-size: 12px;
   color: gray;
 }
+.widgets__smallscreen {
+  display: none;
+}
+
+.widgetsIcon {
+  position: absolute;
+  top: -40px;
+  right: 60px;
+}
 
 @media screen and (max-width: 850px) {
   .widgets {
     display: none;
+  }
+
+  .widgets__smallscreen {
+    display: inline;
+    height: 0;
+    width: 0;
+  }
+}
+
+@media screen and (max-width: 1200) {
+  .widgets {
+    width: 100%;
   }
 }
