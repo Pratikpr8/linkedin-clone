@@ -19,19 +19,24 @@ function Widgets() {
   };
 
   return (
-    <div className="widgets">
-      <div className="widgets__header">
-        <h2>LinkedIn News</h2>
-        <InfoIcon />
+    <>
+      <div className="widgets">
+        <div className="widgets__header">
+          <h2>LinkedIn News</h2>
+          <InfoIcon />
+        </div>
+        {newsArticle(
+          "Zlatan Ibrahimović",
+          "Swedish legend hangs up his boots at 41."
+        )}
+        {newsArticle("F1", "Verstappen dominates the Spanish Grand Prix 2023.")}
+        {newsArticle(
+          "World Cup 2022",
+          "Argentina and Messi win the World Cup."
+        )}
+        {newsArticle("Ballon d'Or", "Messi or Haaland?")}
       </div>
-      {newsArticle(
-        "Zlatan Ibrahimović",
-        "Swedish legend hangs up his boots at 41."
-      )}
-      {newsArticle("F1", "Verstappen dominates the Spanish Grand Prix 2023.")}
-      {newsArticle("World Cup 2022", "Argentina and Messi win the World Cup.")}
-      {newsArticle("Ballon d'Or", "Messi or Haaland?")}
-    </div>
+    </>
   );
 }
 

@@ -21,3 +21,10 @@
 .headerOption:hover {
   color: black;
 }
+
+@media screen and (max-width: 650px) {
+  .headerOption__title {
+    font-size: 8px;
+    font-weight: 400;
+  }
+}

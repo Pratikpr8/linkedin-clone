@@ -34,10 +34,23 @@
 }
 
 .feed__input > form > button {
-  display: none;
+  display: block;
+  outline: none;
+  background: none;
+  border: none;
+  background-color: #0177b7;
+  color: whitesmoke;
+  border-radius: 8px;
+  padding: 7px 7px;
 }
 
 .feed__inputOptions {
   display: flex;
   justify-content: space-evenly;
+}
+
+@media screen and (max-width: 850px) {
+  .feed {
+    margin: 0 auto;
+  }
 }
